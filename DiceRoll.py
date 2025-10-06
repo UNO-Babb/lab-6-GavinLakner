@@ -9,7 +9,7 @@ def main():
   rolls = [0,0,0,0,0,0,0,0,0,0,0,0]
   #Create two dice values ranging from 1 - 6 each
   
-  for r in range(1000):
+  for r in range(10000):
    dice1 = random.randint(1,6)
    dice2 = random.randint(1,6)
    rolls[dice2 + dice1 - 1] = rolls[dice2 + dice1 - 1] + 1
@@ -22,6 +22,8 @@ def main():
   for count in rolls:
     print(dice, ":", count)
     dice = dice + 1
+    percentage = (count / 10000) * 100
+    print(percentage,  "%")
 
 if __name__ == '__main__':
   main()
