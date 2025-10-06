@@ -1,7 +1,7 @@
 #DiceRoll.py
-#Name:
-#Date:
-#Assignment:
+#Name: Gavin Lakner
+#Date: 10/5/2025
+#Assignment: Dice Roll
 import random
 
 def main():
@@ -9,10 +9,19 @@ def main():
   rolls = [0,0,0,0,0,0,0,0,0,0,0,0]
   #Create two dice values ranging from 1 - 6 each
   
+  for r in range(1000):
+   dice1 = random.randint(1,6)
+   dice2 = random.randint(1,6)
+   rolls[dice2 + dice1 - 1] = rolls[dice2 + dice1 - 1] + 1
+
   #find the sum total of the two dice
-  
+
   #print statictics for dice rolls
 
+  dice = 1
+  for count in rolls:
+    print(dice, ":", count)
+    dice = dice + 1
 
 if __name__ == '__main__':
   main()
